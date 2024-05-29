@@ -6,66 +6,36 @@ output: html_document
 ### Introduction
 
 An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+In the US the discrimination and unfair policing of people of color has impacted the prison system since it's beginning. This discrimination in both the police and court systems has resulted in increased jailing of people of color. I am choosing to look at variables from the data set pertaining to how many prisoners there are of different races. This includes the total populations of black, latinx, and white people in the prisons.  
+  
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+The data shows a clear discrepancy in the number of imprisonments according to the race of a person. Across all of the data through the years, I calculated that in a prison almost 40% of the inmates are black, about 13% are latinx, and roughly 31% are white. When considering that a majority of the US is white, and African Americans only make up 14% of the population, a clear injustice is displayed. This injustice is also displayed in the percent of people in the US in prison, sorted by race. The data shows that 1.7% of black people in the US are in prison. This statistic is only 0.5% for latinx Americans, and 0.26% for white Americans. This shows that African Americans are over 6 times more likely to be put in prison than white Americans. 
 
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
 
 ### The Dataset
 
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+This data was collected by The Vera Institute. This group is working to combat the over-policing and mass incarceration of people in poverty and people of color in the US. This data was collected from government surveys of the jail system that are conducted by the US government every five to eight years. These surveys are conducted by the US Department of Justice Bureau of Justice Statistics. This data is collected every few years because in 1965 the President’s Commission on Law Enforcement and Administration of Justice requested a census of the jail system. These surveys have been performed since then. The data consists of 153811 rows and 36 columns. There are many ethical questions and questions of power that arise when working with this data. Data like this has been looked at many times to draw racist and biased conclusions. Some people look at the increased rates of incarceration among African Americans and use it to justify their racist worldviews. Instead of considering the nuanced and biased justice system, they assume that all of the people arrested should have been arrested, and ignore any outside factors. Every societal and systemic facet of this problem must be considered when looking at this data. This data could be limited due to how it is not collected very often- only every 5 to 8 years.
 
 
 ### Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+This graphs displays the change in the number of black, white and Latinx inmates over the years, beginning in 1983 and ending in 2016. This graph displays a clear disparity in incarceration between different racial groups when considering the much larger white population in the US. This disparity is shown to be improving over the years however as the number of black inmates decreased over the last couple decades, however people of color are still incarcerated at a much higher rate.
 
 ``````{r, echo = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Variable Comparison Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+This chart shows the percentage of three different racial groups that were in prison at the time of the prison census in 2016. I included this chart to show the large disparity in incarceration between different races in the US. By putting the data into percentages of the 15 to 64 year old population instead of just the total numbers, you are able to see the injustices people of color face in the US.
 
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+This graph shows a clear disparity in the number of people in prison by state and region of the US. The states with the most people in prison seem to be the ones typically though of as poorer, and with histories of racism and discrimination. The state and region a person lives in can affect their life experience and experience with the US justice system.
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
+``````{r, echo = FALSE, code = readLines("map_example.R")}
+```
